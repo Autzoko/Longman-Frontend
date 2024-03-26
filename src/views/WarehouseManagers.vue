@@ -79,7 +79,7 @@ export default {
             try {
                 await axios.post('api/warehouse-manager/add-manager', this.newManager);
                 this.addManagerDialogVisible = false;
-                this.fetchManagers();
+                await this.fetchManagers();
             } catch (error) {
                 console.error('Error adding manager: ', error);
             }
