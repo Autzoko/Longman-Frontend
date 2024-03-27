@@ -93,7 +93,6 @@ export default {
             updateManagerForm: {},
             selectedField: '',
             fields: [
-                {label: 'ID', value: 'manager_id'},
                 {label: 'Name', value: 'manager_name'},
                 {label: 'Password', value: 'manager_pwd'},
                 {label: 'Level', value: 'manager_level'},
