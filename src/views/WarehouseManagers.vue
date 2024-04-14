@@ -2,7 +2,11 @@
   <div class="main-container">
     <div class="header">
       <h1 class="title">Manager Information</h1>
-      <el-button type="primary" @click="showAddManagerDialog" style="margin-bottom: 20px">Add Manager</el-button>
+      <div style="display: flex;">
+        <el-button type="primary" @click="showAddManagerDialog" style="margin-bottom: 20px">Add Manager</el-button>
+        <el-button @click="goToUploadView" style="margin-left: 30px">Upload File</el-button>
+      </div>
+
     </div>
     <div class="table-container">
       <el-table :data="visibleManagers" style="width: 100%" border>
@@ -113,7 +117,10 @@ export default {
         async editSuccess() {
           await this.fetchManagers();
           this.editManagerDialogVisible = false;
-        }
+        },
+      goToUploadView() {
+          this.$router.push('/upload-file');
+      }
 
     }
 }
